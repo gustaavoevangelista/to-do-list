@@ -57,6 +57,7 @@ label{
 .display-tasks{
   margin-top: 20px;
 }
+
 .display-tasks button{
   height: 30px;
   border: 0;
@@ -66,5 +67,18 @@ label{
   background-color: #12a142;
   color: white;
   font-size: 18px;
+
+}
+
+.task-added{
+  width: 70%;
+  height: 30px;
+  margin-bottom: 12px;
+  padding: 0 12px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: left;
+  background-color: white;
 
 }
