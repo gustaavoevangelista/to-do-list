@@ -14,16 +14,16 @@ export default function App () {
       <span>Never forget a task!</span>
 
       <div className="input-area">
-        New task 
+        <label for="input">New Task</label> 
         <input 
         type="text" 
-        placeholder="Groceries"
+        placeholder="Groceries - Monday morning"
         />
         <button onClick={addTask}>Add</button>
       
       </div>
 
-      <div>
+      <div className="display-tasks">
         tasks added
         <button>Update</button>  
         <button>Delete</button>  
