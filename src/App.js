@@ -18,16 +18,16 @@ export default function App () {
     )
   }
 
-  function updateTask(){
-    alert('clicked')
-  }
+        /*   function updateTask(){
+            alert('clicked')
+          }
 
-  function deleteTask(){
-    let confirmation = prompt('Are you sure you want to delete this task?')
-    if(confirmation === 'Yes'){
-      task.useState('')
-    }
-  }
+          function deleteTask(){
+            let confirmation = prompt('Are you sure you want to delete this task?')
+            if(confirmation === 'Yes'){
+              task.useState('')
+            }
+          } */
 
   return(
     <div className="app">
