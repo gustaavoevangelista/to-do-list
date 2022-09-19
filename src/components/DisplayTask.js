@@ -1,12 +1,19 @@
 import React from "react";
 
 
-export default function DisplayTask(){
+export default function DisplayTask(props){
     return(
         <div className="display-tasks">
-        <div>task</div>
-        <button >Update</button>  
-        <button >Delete</button>
+            <div>
+                <input type="checkbox" />
+                <label>{props.name}</label>
+            </div>
+            <div className="displayButtons">
+                <button >Update</button>  
+                <button >Delete</button>
+            </div>
+            <taskList />
+
       </div>
     )
 }

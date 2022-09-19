@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 
 
-export default function ToDo(){
+export default function Form(props){
     const [task, setTask] = useState('')
 
 
@@ -14,7 +14,6 @@ export default function ToDo(){
           placeholder="Groceries - Monday morning"
           value={task}
           onChange={(e) => setTask(e.target.value)}
-          id="task-input"
           />
           <button>Add</button>
         </form>
