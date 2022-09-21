@@ -8,8 +8,7 @@ export default function DisplayTask(props){
                 <input type="checkbox" />
                 <label>{props.name}</label>
             </div>
-            <div className="displayButtons">
-                <button >Update</button>  
+            <div className="displayButtons"> 
                 <button >Delete</button>
             </div>
             <taskList />
