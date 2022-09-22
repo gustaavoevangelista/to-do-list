@@ -20,15 +20,15 @@ export default function Form(props){
 
     return (
         <div className="input-area">
-        <form onSubmit={handleSubmit}>
-          <input 
-          type="text" 
-          placeholder="Groceries - Monday morning"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          />
-          <button type="submit">Add</button>
-        </form>
+          <form onSubmit={handleSubmit}>
+            <input 
+            type="text" 
+            placeholder="Groceries - Monday morning"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            />
+            <button type="submit">Add</button>
+          </form>
         
       </div>
     )
