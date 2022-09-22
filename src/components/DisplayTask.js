@@ -5,11 +5,21 @@ export default function DisplayTask(props){
     return(
         <div className="display-tasks">
             <div>
-                <input type="checkbox" />
+                <input
+                 id={props.id}
+                 type="checkbox"
+                 defaultChecked={props.completed}
+                 onChange={() =>props.toggleTaskCompleted(props.id)}
+
+                />
                 <label>{props.name}</label>
             </div>
             <div className="displayButtons"> 
-                <button >Delete</button>
+                <button
+                  type="button"
+                  onClick={() => props.deleteTask(props.id)} 
+                
+                >Delete</button>
             </div>
             <taskList />
 

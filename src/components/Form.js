@@ -1,10 +1,9 @@
-import { TrackChangesSharp } from "@material-ui/icons";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
+
 
 
 export default function Form(props){
-    const [name, setName] = useState('')
+  const [name, setName] = useState('')
 
 	function handleSubmit(e){
 		e.preventDefault()
@@ -16,6 +15,8 @@ export default function Form(props){
 			setName("")
 		}
 	}
+
+
 
     return (
         <div className="input-area">
