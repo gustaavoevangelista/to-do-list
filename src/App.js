@@ -1,16 +1,31 @@
 import './App.css'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import {nanoid} from 'nanoid'
 import DisplayTask from './components/DisplayTask'
 import Form from './components/Form'
 
+const LOCAL_STORAGE_KEY = "react-todo-list-todos"
 
 
-export default function App (props) {
+export default function App () {
 
-  const [tasks, setTasks] = useState(props.tasks);
+  const [tasks, setTasks] = useState('');
 
-  
+  //when refresh the page, the tasks wont be lost
+  useEffect(() => {
+    const storageTodos = JSON.parse(localStorage.getItem(LOCAL_STORAGE_KEY))
+
+    if(storageTodos) {
+      setTasks(storageTodos)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem(LOCAL_STORAGE_KEY, JSON.stringify(tasks))
+
+  }, [tasks])
+
+
   function toggleTaskCompleted(id) {
     const updatedTasks = tasks.map(task => {
       // if this task has the same ID as the edited task
@@ -31,7 +46,7 @@ export default function App (props) {
   }
   
   
-  const taskList = tasks.map((task) => (
+  const taskList = tasks ? tasks.map((task) => (
     <DisplayTask
     id={task.id}
     name={task.name}
@@ -41,7 +56,7 @@ export default function App (props) {
     deleteTask={deleteTask}
     />
     ) 
-    )
+  ) : ''
     
   function addTask(name){
     const newTask = {id: `todo-${nanoid()}`, name, completed: false}

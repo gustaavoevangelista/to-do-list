@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 
-
 export default function Form(props){
   const [name, setName] = useState('')
 
@@ -16,20 +15,18 @@ export default function Form(props){
 		}
 	}
 
-
-
-    return (
-        <div className="input-area">
-          <form onSubmit={handleSubmit}>
-            <input 
-            type="text" 
-            placeholder="Groceries - Monday morning"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            />
-            <button type="submit">Add</button>
-          </form>
-        
-      </div>
-    )
+  return (
+      <div className="input-area">
+        <form onSubmit={handleSubmit}>
+          <input 
+          type="text" 
+          placeholder="Groceries - Monday morning"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          />
+          <button type="submit">Add</button>
+        </form>
+      
+    </div>
+  )
 }
